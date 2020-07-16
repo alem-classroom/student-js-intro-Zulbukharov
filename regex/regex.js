@@ -1,18 +1,16 @@
-const CarCat = // your code here
-const PopProp = // your code here
-const Ferrs = // your code here
-const Ious = // your code here
-const WhiteSpace = // your code here
-const LongerThanSix = // your code here
-const NoE = // your code here
-
+const CarCat = /ca[rt]/
+const PopProp = /pr?op/
+const Ferrs = /ferr(et|y|ari)/
+const Ious = /\w+ious(\s|$)/
+const WhiteSpace = / [\.\,\:\;]/
+const LongerThanSix = /\w{7,}/
+const NoE = /\b[^\seE]+\b/
 const quoting = (text) => {
-    // your code here
-}
-
+     return text.replace(/('(?=\s)|^'|(?<=\s)'|'$)/g, '"')
+ }
 const validJSNumber = (str) => {
-    // your code here
-}
+     return /^(\+|\-)?((\d+)?\.\d+|\d+\.(\d+)?|\d+)(e(\-|\+)?\d+)?$/i.test(str)
+ }
 
 // 🚫 don't edit this export
 module.exports = {
